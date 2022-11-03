@@ -15,7 +15,9 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file app/Dockerfile --tag flask-image-revolut:$(date +%s)
+      env:
+        DOCKER_IMAGE: flask-image-revolut:$(date +%s)
+      run: docker build . --file app/Dockerfile --tag $DOCKER_IMAGE
       
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
@@ -33,5 +35,5 @@ jobs:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         ECR_REPOSITORY: ecr-repo-revolut
       run: |
-        docker push $ECR_REGISTRY/$ECR_REPOSITORY:flask-image-revolut:$(date +%s)
+        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$DOCKER_IMAGE
     
