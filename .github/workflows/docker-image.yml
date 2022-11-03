@@ -33,7 +33,7 @@ jobs:
         ECR_REPOSITORY: ecr-repo-revolut
         IMAGE_TAG: flask-image-revolut
       run: |
-        docker build --file app/Dockerfile -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+        docker build --file app/Dockerfile -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
         
     
