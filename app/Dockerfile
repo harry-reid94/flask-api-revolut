@@ -2,12 +2,12 @@
 
 FROM python:3.8-slim-buster
 
-WORKDIR /flask-api-revolut
+WORKDIR /flask-api-revolut/app
 
-COPY app/requirements.txt app/requirements.txt
-RUN pip3 install -r app/requirements.txt
+COPY requirements.txt requirements.txt
+RUN pip3 install -r requirements.txt
 
-COPY app/. app/.
+COPY . .
 
 EXPOSE 5000
 EXPOSE 22
