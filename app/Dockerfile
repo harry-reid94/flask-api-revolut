@@ -14,4 +14,4 @@ EXPOSE 22
 
 WORKDIR /flask-api-revolut/app
 
-CMD [ "pwd"]
+CMD [ "python3", "app.py"]
