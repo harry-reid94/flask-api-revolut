@@ -12,4 +12,4 @@ COPY app/. app/.
 EXPOSE 5000
 EXPOSE 22
 
-CMD [ "python3 app/app.py"]
+CMD [ "pwd"]
