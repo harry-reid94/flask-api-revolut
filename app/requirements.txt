@@ -1,6 +1,9 @@
 Flask==1.1.1
+itsdangerous==2.0.1
+markupsafe==2.0.1
 Jinja2==2.11.0
 pylint==2.4.4
 pylint-flask==0.6
 pylint-plugin-utils==0.6
+werkzeug==2.0.3
 virtualenv==16.7.9
