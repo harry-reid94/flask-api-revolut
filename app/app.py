@@ -33,7 +33,7 @@ def insert_user(username):
     birthdate_str = user['dateOfBirth']
     birthdate = datetime.strptime(birthdate_str, '%Y-%m-%d').date()
     if birthdate >= datetime.today().date() or any(i.isdigit() for i in username):
-        return "Birthdate and/or username are invalid", 400
+        return {"message": "Birthdate and/or username are invalid"}, 400
     else:
         users.update({username : {"dateOfBirth": birthdate_str}})
         with open(filename, 'w') as json_file:
@@ -48,7 +48,7 @@ def happy_birthday(username):
         message = "Hello " + username + ", " + calculate_birthday(users[username]["dateOfBirth"])
         return  {"message": message}
     except:
-        return "User does not exist", 400
+        return {"message": "User does not exist"}, 400
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5000)
