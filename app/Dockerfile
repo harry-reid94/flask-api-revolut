@@ -2,14 +2,16 @@
 
 FROM python:3.8-slim-buster
 
-WORKDIR /app
+WORKDIR /flask-api-revolut
 
-# COPY app/requirements.txt app/requirements.txt
-# RUN pip3 install -r app/requirements.txt
+COPY app/requirements.txt app/requirements.txt
+RUN pip3 install -r app/requirements.txt
 
-# COPY app/. app/.
+COPY app/. app/.
 
 EXPOSE 5000
 EXPOSE 22
+
+WORKDIR /flask-api-revolut/app
 
 CMD [ "pwd"]
