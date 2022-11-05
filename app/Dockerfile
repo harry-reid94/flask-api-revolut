@@ -6,7 +6,6 @@ WORKDIR /flask-api-revolut
 
 COPY app/requirements.txt app/requirements.txt
 RUN pip3 install -r app/requirements.txt
-RUN apt-get install -y openssh-server 
 
 COPY app/. app/.
 
