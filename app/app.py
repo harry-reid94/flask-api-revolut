@@ -1,13 +1,27 @@
 import flask, json
+from pathlib import Path
 from datetime import datetime
 from flask import request, jsonify
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
 # Create some test data for our catalog in the form of a list of dictionaries.
-filename = 'datastore/users.json'
-file = open(filename)
-users = []
-users = json.load(file)
+# filename = 'datastore/users.json'
+
+# users = []
+# users = json.load(file)
+
+usersFile = 'datastore/users.json'
+usersPath = Path(usersFile)
+if not usersPath.is_file():
+    with open(usersFile, 'w') as file:
+        try:
+            users = json.load(file)
+        except:
+            users = {}
+            json.dump(users, file)
+else:
+    file = open(usersFile)
+    users = json.load(file)
 
 def calculate_birthday(birthdate_str):
     now = datetime.now()
@@ -36,7 +50,7 @@ def insert_user(username):
         return {"message": "Birthdate and/or username are invalid"}, 400
     else:
         users.update({username : {"dateOfBirth": birthdate_str}})
-        with open(filename, 'w') as json_file:
+        with open(usersFile, 'w') as json_file:
             json.dump(users, json_file, 
                                 indent=4,  
                                 separators=(',',': '))
