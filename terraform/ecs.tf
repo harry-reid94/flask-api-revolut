@@ -47,7 +47,7 @@ resource "aws_ecs_service" "ecs_service" {
   name            = "flask-ecs-service"
   cluster         = aws_ecs_cluster.main.id
   task_definition = aws_ecs_task_definition.ecs_task.arn
-  desired_count   = 4
+  desired_count   = var.ecs_node_count
   launch_type     = "FARGATE"
 
   network_configuration {

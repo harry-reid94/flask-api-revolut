@@ -14,3 +14,8 @@ variable "role_name" {
   default = "flask-role"
   type        = string
 }
+
+variable "ecs_node_count" {
+  default = 6
+  type        = number
+}
