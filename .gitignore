@@ -1,3 +1,4 @@
 app/venv/
 terraform/.terraform
 terraform/init_tf_state/.terraform
+terraform/init_tf_state/terraform.tfstate*
