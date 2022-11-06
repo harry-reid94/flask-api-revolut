@@ -22,7 +22,7 @@ resource "aws_ecs_task_definition" "ecs_task" {
     ],
     "mountPoints": [
           {
-              "containerPath": "/flask-api-revolut/app/datastore/efs",
+              "containerPath": "/flask-api-revolut/app/datastore",
               "sourceVolume": "efs-flask"
           }
     ]
