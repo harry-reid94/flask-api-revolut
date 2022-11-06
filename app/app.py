@@ -4,11 +4,6 @@ from datetime import datetime
 from flask import request, jsonify
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
-# Create some test data for our catalog in the form of a list of dictionaries.
-# filename = 'datastore/users.json'
-
-# users = []
-# users = json.load(file)
 
 usersFile = 'datastore/users.json'
 usersPath = Path(usersFile)
