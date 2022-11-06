@@ -1,1 +1,3 @@
 app/venv/
+terraform/.terraform
+terraform/init_tf_state/.terraform
