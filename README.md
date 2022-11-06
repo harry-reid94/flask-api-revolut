@@ -48,7 +48,8 @@ Each time a code change is pushed to the remote repo, Github Actions rebuilds th
 
 TODO: Finish considerations
 
-### Code Efficiency
+### Application Code
+### Infrastructure design
 
 ### Cost Efficiency
 Fargate - serverless, s3 for json storage, but potentially sacrificing speed
