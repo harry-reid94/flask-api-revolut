@@ -32,6 +32,9 @@ With ECS, we can easily set up monitoring alongside in the form of AWS managed C
 ### Scalability
 The service is highly scalable thanks to ECS. We can define how many containers we'd like to be running at any one time. This can be adjusted dynamically by introducing auto-scaling to match traffic demands.
 
+### Security
+The solution is secure given that the deployed application lives in private subnets. There are also security groups defined with limited inbound rules. We can lock down these security groups even futher by limiting requests from known subnets within the VPC. The Load Balancer is listening on port 80, which is an unsecure protocol, unlike HTTPS on port 443. Given the previously mentioned setup, this isn't an immediate risk, but it does allow potential for attacks.
+
 ### Availability
 The service is spread across two AZs in a single region, each with an X number of containers behind an ALB. It is reliable to an extent, but it is not uncommon for entire regions to go down. We can increase availability by multiple factors by using all three available AZs, going multi-region and even multi-cloud.
 
