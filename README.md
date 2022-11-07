@@ -53,9 +53,9 @@ Infrastructure provisioning was again an easy choice, with Terraform being the m
 
 ## Areas of Improvement
 - Modularize Terraform resources
+- Variablize Terraform more!
 - Introduce a monitoring stack
 - Auto-scaling
 - Switch to DynamoDB for JSON users storage
 - Multi-cloud with a CDN on top
 - Limit security group CIDRs to defined subnets
-- Variablize Terraform more!
