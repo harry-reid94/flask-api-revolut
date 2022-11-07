@@ -59,3 +59,4 @@ Infrastructure provisioning was again an easy choice, with Terraform being the m
 - Switch to DynamoDB for JSON users storage
 - Multi-cloud with a CDN on top
 - Limit security group CIDRs to defined subnets
+- Enforce HTTPS requests
