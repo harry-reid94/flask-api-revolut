@@ -43,7 +43,7 @@ ECS comes at an extra cost to traditional EC2 servers, but also handles a lot of
 Github actions is not free for private repositories, would need to analyse cost before opting to use it. Otherwise could use open source deployment tools like Jenkins.
 
 ### Toolkit
-Flask is a super web framework for developing simple APIs. I can't think of a better tool to use for this type of task, especially given my experience with Python. Docker is another easy choice, rapidly increasing deployment velocity and ease of maintenance. For the cloud provider, I went with AWS again due to my level of experience with it. But another of the three big players would be sufficient, just depends on the employers predisposition. 
+Flask is a super web framework for developing simple APIs. I can't think of a better tool to use for this type of task, especially given my experience with Python. Docker is another easy choice, rapidly increasing deployment velocity and ease of maintenance. For the cloud provider, I went with AWS again due to my level of experience with it. 
 
 Choosing the cloud components was probably the biggest decision to make. As previously mentioned, there were multiple choices for file storage - S3, DynamoDB, EFS, EBS etc. For this particular task EFS seemed the most fitting, given the ease at which we can mount files to containers. For services like DynamoDB, the code would need to be modified to include read/write commands to the database. Opted for ECS over EKS or a self managed Kubernetes function purely for simplicity, but given more time the solution could well be different.
 
