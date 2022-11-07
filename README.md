@@ -26,8 +26,7 @@ Home assignment for Revolut DevOps Engineer position.
 #### 
 ## System Design
 A sketch of the cloud architecture, deployed using Terraform.
-
-TODO: Sketch
+![alt text](system-design-revolut.png)
 
 ## Considerations
 
