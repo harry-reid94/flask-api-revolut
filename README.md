@@ -14,7 +14,7 @@ A sketch of the cloud architecture, deployed using Terraform.
 
 ## How to Run
 
-This is a home assignment for demonstration with some private components e.g. ECR repository that stores the Docker image and therefore can't be ran publicly. 
+This is a home assignment for demonstration purposes with some private components e.g. ECR repository that stores the Docker image and therefore can't be ran publicly. 
 
 ## Considerations
 
