@@ -44,7 +44,7 @@ The service is spread across two AZs in a single region, each with an X number o
 Each time a code change is pushed to the remote repo, the defined [Github Actions workflow](https://github.com/harry-reid94/flask-api-revolut/blob/main/.github/workflows/flask-image.yml) rebuilds the image and pushes to a private repository in ECR. We can also add a task into the workflow to deploy the new task definition.
 
 ### Cost Efficiency
-ECS comes at an extra cost to traditional EC2 servers, but also handles a lot of the operational complexity of container orchestration. Could use a service outside of AWS managed services like Kubernetes. 
+ECS comes at an extra cost to traditional EC2 servers, but also handles a lot of the operational complexity of container orchestration so most likely works out cheaper when taking operational costs into account. Could use a service outside of AWS managed services like Kubernetes. 
 Github actions is not free for private repositories, would need to analyse cost before opting to use it. Otherwise could use open source deployment tools like Jenkins.
 
 ### Toolkit
