@@ -45,6 +45,7 @@ Each time a code change is pushed to the remote repo, the defined [Github Action
 
 ### Cost Efficiency
 ECS comes at an extra cost to traditional EC2 servers, but also handles a lot of the operational complexity of container orchestration so most likely works out cheaper when taking operational costs into account. Could use a service outside of AWS managed services like Kubernetes. 
+
 Github actions is not free for private repositories, would need to analyse cost before opting to use it. Otherwise could use open source deployment tools like Jenkins.
 
 ### Toolkit
