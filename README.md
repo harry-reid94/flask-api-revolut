@@ -66,3 +66,5 @@ Infrastructure provisioning was again an easy choice, with Terraform being the m
 - Multi-cloud with a CDN on top
 - Limit security group CIDRs to defined subnets
 - Enforce HTTPS requests
+- Include app usage in README
+- Be runnable publicly
